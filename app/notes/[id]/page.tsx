@@ -2,7 +2,7 @@ import styles from '../Notes.module.css';
 
 async function getNote(noteId: string) {
   const res = await fetch(
-    `${process.env.PB_URL}/api/collections/notes/records/${noteId}`,
+    `${process.env.NEXT_PUBLIC_PB_URL}/api/collections/notes/records/${noteId}`,
     {
       next: { revalidate: 10 },
     }
