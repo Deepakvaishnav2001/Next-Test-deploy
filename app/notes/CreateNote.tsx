@@ -25,7 +25,7 @@ export default function CreateNote() {
     //   content,
     // });
 
-    await fetch('http://127.0.0.1:8090/api/collections/notes/records', {
+    await fetch(`${process.env.PB_URL}/api/collections/notes/records`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
